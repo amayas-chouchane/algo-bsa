@@ -8,6 +8,7 @@ class algorithme
         algorithme();
         virtual ~algorithme();
 
+
     protected:
 
     private:
