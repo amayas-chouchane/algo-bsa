@@ -1,9 +1,13 @@
+
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello bsa program" << endl;
+    cout << "Hello world!" << endl;
+    cout <<" githusb ";
     return 0;
+
 }
+
