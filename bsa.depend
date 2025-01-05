@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1736111489 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\main.cpp
+	<iostream>
+	"algorithme.h"
+	<vector>
+
+1736113587 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\src\algorithme.cpp
+	"algorithme.h"
+	<stdlib.h>
+	<iostream>
+	<limits>
+
+1736113096 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\algorithme.h
+	<vector>
+
