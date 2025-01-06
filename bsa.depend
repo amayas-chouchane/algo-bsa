@@ -17,13 +17,14 @@
 	<iostream>
 	<vector>
 
-1736182790 source:c:\users\youne\desktop\ai_projet\algo-bsa\solution.cpp
+1736184273 source:c:\users\youne\desktop\ai_projet\algo-bsa\solution.cpp
 	"Solution.h"
 	<cstdlib>
 	<iostream>
 	<cmath>
+	<limits>
 
-1736182756 c:\users\youne\desktop\ai_projet\algo-bsa\solution.h
+1736184273 c:\users\youne\desktop\ai_projet\algo-bsa\solution.h
 	<iostream>
 	<vector>
 	<math.h>
