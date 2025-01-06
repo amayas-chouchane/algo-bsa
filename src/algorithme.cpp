@@ -98,7 +98,17 @@ void algorithme::bsa ()
             shuffle(OldP[i].begin(), OldP[i].end(), generateur);
         }
 
-
+        double crossoverRate = 0.8; // Exemple : Taux de crossover
+        for (int i = 0; i < pop_size; ++i) {
+            for (int j = 0; j < dim; ++j) {
+                double r = static_cast<double>(rand()) / RAND_MAX;
+                if (r < crossoverRate) {
+                    T[i][j] = mutant[i][j]; // Prendre le gène de mutant
+                } else {
+                    T[i][j] = P[i][j]; // Garder le gène de P
+                }
+            }
+        }
 
 
 
