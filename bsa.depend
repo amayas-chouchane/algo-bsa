@@ -13,3 +13,20 @@
 1736160160 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\algorithme.h
 	<vector>
 
+1736182431 source:c:\users\youne\desktop\ai_projet\algo-bsa\main.cpp
+	<iostream>
+	<vector>
+
+1736182790 source:c:\users\youne\desktop\ai_projet\algo-bsa\solution.cpp
+	"Solution.h"
+	<cstdlib>
+	<iostream>
+	<cmath>
+
+1736182756 c:\users\youne\desktop\ai_projet\algo-bsa\solution.h
+	<iostream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<limits>
+
