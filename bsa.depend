@@ -15,20 +15,39 @@
 1736203723 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\algorithme.h
 	<vector>
 
-1736182431 source:c:\users\youne\desktop\ai_projet\algo-bsa\main.cpp
+1736259301 source:c:\users\youne\desktop\ai_projet\algo-bsa\main.cpp
 	<iostream>
 	<vector>
+	"solution.h"
+	"include/algorithme.h"
 
-1736182790 source:c:\users\youne\desktop\ai_projet\algo-bsa\solution.cpp
+1736252256 source:c:\users\youne\desktop\ai_projet\algo-bsa\solution.cpp
 	"Solution.h"
 	<cstdlib>
 	<iostream>
 	<cmath>
+	<limits>
 
-1736182756 c:\users\youne\desktop\ai_projet\algo-bsa\solution.h
+1736255224 c:\users\youne\desktop\ai_projet\algo-bsa\solution.h
 	<iostream>
 	<vector>
 	<math.h>
 	<cstdlib>
 	<limits>
+
+1736255169 c:\users\youne\desktop\ai_projet\algo-bsa\include\algorithme.h
+	"../solution.h"
+	<vector>
+	<limits>
+	<random>
+	<algorithm>
+
+1736259299 source:c:\users\youne\desktop\ai_projet\algo-bsa\src\algorithme.cpp
+	"../include/algorithme.h"
+	"../solution.h"
+	<stdlib.h>
+	<iostream>
+	<limits>
+	<algorithm>
+	<random>
 
