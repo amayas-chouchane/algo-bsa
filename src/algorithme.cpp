@@ -27,6 +27,32 @@ std::vector<std::vector<double>> algorithme::genererPopulation(std::vector<doubl
     }
     return pop;
 }
+double algorithme::randn()
+{
+    // Générateur de nombres pseudo-aléatoires
+    static std::default_random_engine generator(std::random_device{}());
+    // Distribution normale standard N(0, 1)
+    static std::normal_distribution<double> distribution(0.0, 1.0);
+
+    return distribution(generator);
+}
+double algorithme::min(const vector<double>& vec, int& indexMin)
+{
+
+    double valeurMin = vec[0];
+    indexMin = 0;
+
+    for (int i = 0; i < vec.size(); ++i)
+    {
+        if (vec[i] < valeurMin)
+        {
+            valeurMin = vec[i];
+            indexMin = i;
+        }
+    }
+
+    return valeurMin;
+}
 
 void algorithme :: affichage (const std::vector<std::vector<double>> &tab)
 {
@@ -68,9 +94,7 @@ void algorithme::bsa ()
     //répéter jusqu'à nombre d'itérations atteint
     for (int k =0 ; k <epoch ; k++)
     {
-        //générer des variables aléatoires entre 0.0 et 1.0
-        double c = rand() / (RAND_MAX + 1.0);
-        double d = rand() / (RAND_MAX + 1.0);
+
 
         //sélection I
         for (int i=0 ; i< pop_size ; i++)
@@ -97,14 +121,96 @@ void algorithme::bsa ()
             // Mélanger le vecteur OldP
             shuffle(OldP[i].begin(), OldP[i].end(), generateur);
         }
+        //mutation
+        for (int i=0 ; i < pop_size ; i++)
+        {
+            for (int j=0; j < dim ; j++)
+            {
+                mutant [i][j] = P[i][j] +3*randn() * (OldP[i][j]-P[i][j]);
+            }
+
+        }
+        //croissement
+        for (int i=0 ; i < pop_size ; i++)
+        {
+            for (int j=0; j < dim ; j++)
+            {
+                map [i][j] = 1 ;
+            }
+
+        }
+
+        //générer des variables aléatoires entre 0.0 et 1.0
+        double c = rand() / (RAND_MAX + 1.0);
+        double d = rand() / (RAND_MAX + 1.0);
+
+        if ( c < d )
+        {
+            std::vector<int> u(dim);
+            for (int j = 0; j < dim; ++j)
+            {
+                u[j] = j;
+            }
+            for (int i =0 ; i < pop_size ; i++)
+            {
+                std::random_shuffle(u.begin(), u.end());
+                int temp = static_cast<int>(std::ceil(mixRate * dim * rand()));
+                for (int j =1 ; j< temp ; j++)
+                {
+                    map[i][u[j]] = 0 ;
+                }
+            }
 
 
+        }
+        else
+        {
+
+            for (int i =0 ; i < pop_size ; i++)
+            {
+                int randi = rand() % dim ;
+                map[i][randi]=0;
+            }
+        }
 
 
+        // Generation of a trial population
+        for (int i=0 ; i < pop_size ; i++)
+        {
+            for (int j=0; j < dim ; j++)
+            {
+                T [i][j] = mutant [i][j] ;
+            }
+
+        }
+
+        for (int i=0 ; i < pop_size ; i++)
+        {
+            for (int j=0; j < dim ; j++)
+            {
+                if (map[i][j] == 1)
+                {
+                    T [i][j] = P [i][j] ;
+                }
+            }
 
 
+        }
+
+        //controle des bornes ( boundary control )
+
+        for (int i=0 ; i < pop_size ; i++)
+        {
+            for (int j=0; j < dim ; j++)
+            {
+                if ( (T[i][j] < low [j]) ||  (T[i][j] > up [j]))
+                {
+                    T [i][j] =(static_cast<double>(std::rand()) / RAND_MAX) * (up[j] - low[j]) + low[j] ;
+                }
+            }
 
 
+        }
 
         //sélection II
         for (int i=0 ; i<pop_size ; i++)
@@ -120,12 +226,15 @@ void algorithme::bsa ()
                 P[i]=T[i] ;
             }
         }
-        double fitnessPbest;
-        //=min(fitnessP);
+        int indexMin ;
+        double fitnessPbest = min(fitnessP,indexMin);
         if (fitnessPbest< globalMin)
         {
             globalMin=fitnessPbest;
-            // globalMinimizer=P;
+            for (int j =0 ; j< dim ; j++ )
+            {
+                globalMinimizer[j]=P[indexMin][j];
+            }
         }
     }
 }
