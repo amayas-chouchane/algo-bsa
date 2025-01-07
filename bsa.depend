@@ -1,17 +1,35 @@
 # depslib dependency file v1.0
-1736162965 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\main.cpp
+1736272539 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\main.cpp
 	<iostream>
-	"algorithme.h"
 	<vector>
+	<limits>
+	"./include/Solution.h"
+	"./include/algorithme.h"
 
-1736203827 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\src\algorithme.cpp
+1736273482 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\src\algorithme.cpp
 	"algorithme.h"
 	<stdlib.h>
 	<iostream>
 	<limits>
 	<algorithm>
 	<random>
+	<ctime>
 
-1736203723 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\algorithme.h
+1736270505 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\algorithme.h
 	<vector>
+	"solution.h"
+
+1736270505 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\src\solution.cpp
+	"Solution.h"
+	<cstdlib>
+	<iostream>
+	<cmath>
+	<limits>
+
+1736265879 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\solution.h
+	<iostream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<limits>
 
