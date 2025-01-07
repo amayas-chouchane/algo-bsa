@@ -1,33 +1,62 @@
 # depslib dependency file v1.0
-1736111489 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\main.cpp
+1736162965 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\main.cpp
 	<iostream>
 	"algorithme.h"
 	<vector>
 
-1736160237 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\src\algorithme.cpp
+1736203827 source:c:\users\amaya\desktop\l3 miage\projet_ai\bsa\src\algorithme.cpp
 	"algorithme.h"
 	<stdlib.h>
 	<iostream>
 	<limits>
+	<algorithm>
+	<random>
 
-1736160160 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\algorithme.h
+1736203723 c:\users\amaya\desktop\l3 miage\projet_ai\bsa\include\algorithme.h
 	<vector>
 
-1736182431 source:c:\users\youne\desktop\ai_projet\algo-bsa\main.cpp
+1736263004 source:c:\users\youne\desktop\ai_projet\algo-bsa\main.cpp
 	<iostream>
 	<vector>
+	"solution.h"
+	"include/algorithme.h"
 
-1736184273 source:c:\users\youne\desktop\ai_projet\algo-bsa\solution.cpp
+1736252256 D
+
+1736252256 source:c:\users\youne\desktop\ai_projet\algo-bsa\solution.cpp
+
+1736255224 n
 	"Solution.h"
 	<cstdlib>
 	<iostream>
 	<cmath>
 	<limits>
-
-1736184273 c:\users\youne\desktop\ai_projet\algo-bsa\solution.h
 	<iostream>
 	<vector>
 	<math.h>
 	<cstdlib>
 	<limits>
+
+1736262966 c:\users\youne\desktop\ai_projet\algo-bsa\solution.h
+	<iostream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<limits>
+
+1736262966 c:\users\youne\desktop\ai_projet\algo-bsa\include\algorithme.h
+	"../solution.h"
+	<vector>
+	<limits>
+	<random>
+	<algorithm>
+
+1736263072 source:c:\users\youne\desktop\ai_projet\algo-bsa\src\algorithme.cpp
+	"../include/algorithme.h"
+	"../solution.h"
+	<stdlib.h>
+	<iostream>
+	<limits>
+	<algorithm>
+	<random>
 

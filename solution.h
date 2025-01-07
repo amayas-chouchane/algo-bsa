@@ -27,6 +27,8 @@ public:
     // Public properties
     vector<double> tabLine; // Representation of variables
     int functionIndex;      // Type of the objective function (1=Rosenbrock, 2=Rastrigin, etc.)
+    // Function to calculate fitness based on selected objective function
+ void fitness(const vector<double>& solution);
 
 private:
     double currentFitness; // Current fitness value
@@ -38,8 +40,7 @@ private:
     double ackley(const vector<double>& solution);
     double schwefel(const vector<double>& solution);
 
-    // Function to calculate fitness based on selected objective function
- void fitness(const vector<double>& solution);
+
 };
 
 #endif // SOLUTION_H_INCLUDED

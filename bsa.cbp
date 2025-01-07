@@ -32,7 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/algorithme.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="solution.cpp" />
+		<Unit filename="solution.h" />
+		<Unit filename="src/algorithme.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
